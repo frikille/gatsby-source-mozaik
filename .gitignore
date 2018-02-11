@@ -1,0 +1,15 @@
+coverage
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/*.js
+!index.js
+package-lock.json
+
+.env

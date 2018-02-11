@@ -3,6 +3,9 @@
 Source plugin for pulling data from a Mozaik endpoint into GatsbyJs.
 
 ## Install
+1. `yarn add gatsby-source-mozaik` or `npm i gatsby-source-mozaik`
+1. Add reference in your Gatsby config plugins section to `gatsby-source-mozaik`. See example below.
+1. Run `gatsby develop`
 
 ## Usage
 
@@ -42,16 +45,16 @@ plugins: [
 ```
 
 ### Plugin options
-Key | Value | Required
--------- | --------
-endpoint | Your mozaik api endpoint: `https://api.mozaik.io/[your-project-name]` | Yes
-accessToken | The access token for authorizing against the api | Yes
-query | The graphql query to execute. You should use the sample documents query and only amend it. | Yes
-variables | Variables to use in the graphql query | Yes
-variables.types | An array of string that defines the content types you want to get from the api | Yes
-variables.pageSize | Number of items to download in one batch | Yes
-variables.page | The page number | Yes
-fragments | An array of string that defines the fields you want to query on each content type | No
+| Key      | Value    | Required |
+| -------- | -------- | -------- |
+| endpoint | Your mozaik api endpoint: `https://api.mozaik.io/[your-project-name]` | Yes |
+| accessToken | The access token for authorizing against the api | Yes |
+| query | The graphql query to execute. You should use the sample documents query and only amend it. | Yes |
+| variables | Variables to use in the graphql query | Yes |
+| variables.types | An array of string that defines the content types you want to get from the api | Yes |
+| variables.pageSize | Number of items to download in one batch | Yes |
+| variables.page | The page number | Yes |
+| fragments | An array of string that defines the fields you want to query on each content type | No |
 
 ## How to write a query
 
@@ -137,7 +140,7 @@ And that's it! You're ready to run `gatsby develop` and load all your documents.
 
 ## Contributing
 
-1. `cd` to the Gatsby project you've set up in which you want to test your changes of the plugin code, or clone `mozaikio/mozaik-gatsby-example`
+1. `cd` to the Gatsby project you've set up in which you want to test your changes of the plugin code, or clone [`mozaikio/mozaik-gatsby-example`](https://github.com/mozaikio/mozaik-gatsby-example)
 1. If you cloned the example or previously installed the plugin through `yarn` or `npm`, run `yarn remove gatsby-source-mozaik` or `npm r gatsby-source-mozaik`
 1. `mkdir plugins` if it does not exist in your Gatsby project yet and `cd` into it
 1. The path should now be something like `~/projects/mozaik-gatsby-website/plugins/`
